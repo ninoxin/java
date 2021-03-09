@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Lesson1</h2>
+    <label>
+        <input type="checkbox" id="one" onchange="fun1()">
+        Like
+    </label>
+    <input type="radio" name="r1" value="5"> 0
+    <input type="radio" name="r1" value="53"> 1
+    <input type="radio" name="r1" value="535"> 2
+    <button onclick="fun2()">Проверка</button>
+
+
+    <h2>Lesson2</h2>
+        <select name="" id="mySelect" onchange="fun3()">
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+        </select>
+        <input type="range" min="0" max="100" step="2" oninput="fun4()" id="r2">
+        <p id="one"></p>
+
+    
+    <h2>Lesson3</h2>
+    <div class="block1">
+        <p>Верхний левый угол:
+            <input type="range" id="rtl" min="0" max="100" value="0" oninput="fun5()">
+            <input type="text" id="ttl" value="0">
+        </p>
+        <p>Верхний правый угол:
+            <input type="range" id="rtr" min="0" max="100" value="0" oninput="fun5()">
+            <input type="text" id="ttr" value="0">
+        </p>
+        <p>Нижний правый угол:
+            <input type="range" id="rbr" min="0" max="100" value="0" oninput="fun5()">
+            <input type="text" id="tbr" value="0">
+        </p>
+        <p>Нижний левый угол:
+            <input type="range" id="rbl" min="0" max="100" value="0" oninput="fun5()">
+            <input type="text" id="tbl" value="0">
+        </p>
+    </div>
+    <div id="block"></div>
+
+
+    <h2>Lesson4</h2>
+        <div id="nav">
+            <div class="menu-item">
+            menu1
+                <div class="submenu">submenu</div>
+            </div>
+            <div class="menu-item">
+            menu2
+                <div class="submenu">submenu</div>
+            </div>
+            <div class="menu-item">
+            menu3
+                <div class="submenu">submenu</div>
+            </div>
+        </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

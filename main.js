@@ -1,21 +1,21 @@
 function fun1() {
-    var chbox;
-    chbox = document.getElementById('one');
+var chbox;
+chbox = document.getElementById('one');
 
-    if (chbox.checked) {
-        alert('Yes');
-    }
-    else {
-        alert('No');
-    }
+if (chbox.checked) {
+    alert('Yes');
+}
+else {
+    alert('No');
+}
 }
 
 
 function fun2() {
     var radi = document.getElementsByName('r1');
-    for (var i = 0 ; i < radi.length; i++) {
+    for (var i = 0; i < radi.length; i++) {
         if (radi[i].checked) {
-            alert('Выбран ' +i+  ' элемент');
+            alert('Выбран ' + i + ' элемент');
         }
     }
 }
@@ -26,7 +26,7 @@ function fun2() {
 function fun3() {
     var sel = document.getElementById('mySelect').selectedIndex;
     var options = document.getElementById('mySelect').options;
-    alert('Выбрана опция ' +options[sel].text); 
+    alert('Выбрана опция ' + options[sel].text);
 }
 
 
@@ -59,17 +59,17 @@ function fun5() {
 
 document.getElementById('nav').onmouseover = function (event) {
     var target = event.target;
-    if (target.className == 'menu-item'){
+    if (target.className == 'menu-item') {
         var s = target.getElementsByClassName('submenu');
         closeMenu();
-        s[0].style.display="block";      
+        s[0].style.display = "block";
     }
 }
 
 document.onmouseover = function (event) {
     var target = event.target;
     console.log(event.target);
-    if (target.className!='menu-item' && target.className!='submenu'){
+    if (target.className != 'menu-item' && target.className != 'submenu') {
         closeMenu();
     }
 }
@@ -78,7 +78,7 @@ function closeMenu() {
     var menu = document.getElementById('nav');
     var subm = document.getElementsByClassName('submenu');
     for (var i = 0; i < subm.lenght; i++) {
-        subm[i].style.display="none";
+        subm[i].style.display = "none";
     }
 }
 
@@ -188,3 +188,122 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+function plus() {
+
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 + num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function minus() {
+
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 - num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function multiplication() {
+
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 * num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+function division() {
+
+    var num1, num2, result;
+
+    num1 = document.getElementById('n1').value;
+    num1 = parseInt(num1);
+
+    num2 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+
+    result = num1 / num2;
+
+    document.getElementById('out').innerHTML = result;
+}
+
+
+let map;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
